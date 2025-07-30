@@ -1,55 +1,31 @@
-# README Template
+# Recommendation System Project
 
-Below is a template provided for use when building your README file for students.
-
-# Project Title
-
-Project description goes here.
-
-## Getting Started
-
-Instructions for how to get a copy of the project running on your local machine.
-
-### Dependencies
-
-```
-Examples here
-```
-
-### Installation
-
-Step by step explanation of how to get a dev environment running.
-
-List out the steps
-
-```
-Give an example here
-```
-
-## Testing
-
-Explain the steps needed to run any automated tests
-
-### Break Down Tests
-
-Explain what each test does and why
-
-```
-Examples here
-```
+This project uses real data from users and articles on the IBM Watson Studio platform and makes recommendations about new articles.
 
 ## Project Instructions
 
-This section should contain all the student deliverables for this project.
+All code can be found in the Jupyter notebook. You may need install some of the packages used in the notebook (matplotlib, scikit-learn, etc.). THe project includes the following sections:
 
-## Built With
+### Exploratory Data Analysis
 
-* [Item1](www.item1.com) - Description of item
-* [Item2](www.item2.com) - Description of item
-* [Item3](www.item3.com) - Description of item
+In this section, we look at and try to answer some basic, required questions about the data.
 
-Include all items used to build project.
+### Rank Based Recommendations
 
-## License
+The first type of recommendation system we built is rank based, which finds the most popular articles based on the number of user interactions. This style of recommendation is good for new users with little to no history, as we don't need any information about/from the user to do rank based recommendations.
 
-[License](LICENSE.txt)
+### User-User Based Collaborative Filtering
+
+The second type of recommendation system we built is user-user based collaborative filtering, which finds similar users based on article interactions and recommends other articles that the similar users have interacted with that the specified user hasn't. This works well with users with a lot of history, as we are able to get similar users based on their history.
+
+### Contet Based Recommendations
+
+The third type of recommendation system we built is content based, which first clusters similar articles together using NLP and then recommends articles based on similarities in content.
+
+### Matrix Factorization
+
+The last type of recommendation system we built is matrix factorization. Using the user-item interactions, we built out a matrix decomposition. We use that matrix decomposition to get an idea of how well we can predict new articles an individual might interact with.
+
+## Acknowledgements
+
+This project was originally completed as part of the Udacity Data Scientist nanodegree.
